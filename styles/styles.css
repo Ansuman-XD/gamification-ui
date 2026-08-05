@@ -1,0 +1,425 @@
+/* ============================
+   RESET
+============================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'SpaceGrotesk-Light_', -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: #470879;
+}
+
+/* ============================
+   PHONE / PAGE WRAPPER
+   (mobile-only, flexbox column)
+============================ */
+.phone {
+  width: 100%;
+  max-width: 480px;
+  min-height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(180deg, #8a2be2 0%, #470879 60%, #2e0553 100%);
+  padding: 24px 22px 100px 22px;
+  overflow-x: hidden;
+}
+
+/* ============================
+   TOP BAR
+============================ */
+.topbar {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 28px;
+}
+
+.xp-badge {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Star shape (given as solid block clipped to star) */
+.Shape {
+  /* width: 18.7px;
+  height: 21px;
+  flex-grow: 0;
+  background-color: #ffda57;
+  clip-path: polygon(
+    50% 0%, 61% 35%, 98% 35%, 68% 57%,
+    79% 91%, 50% 70%, 21% 91%, 32% 57%,
+    2% 35%, 39% 35%
+  ); */
+  width: 18.7px;
+  height: 21px;
+  flex-grow: 0;
+  /* background-color: #ffda57; */
+}
+
+.XP {
+  width: 44px;
+  height: 21px;
+  flex-grow: 0;
+  font-family: SpaceGrotesk-Light_, sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #ffda57;
+  white-space: nowrap;
+}
+
+/* Settings gear circle */
+.Stack {
+  width: 40px;
+  height: 40px;
+  flex-grow: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 7px;
+  border-radius: 35px;
+  border: solid 1px rgba(255, 255, 255, 0.5);
+}
+
+.gear-icon {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* ============================
+   PROFILE PHOTO
+============================ */
+.photo-wrap {
+  width: 200px;
+  height: 200px;
+  border-radius: 28px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  margin-bottom: 20px;
+}
+
+.photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ============================
+   NAME
+============================ */
+.name-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+.name {
+  font-size: 28px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+/* .verified-badge {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+} */
+ .verified-badge {
+  width: 22.2px;
+  height: 22.2px;
+  flex-grow: 0;
+  background-image: linear-gradient(135deg, #11fd00, #00aa49 100%);
+  clip-path: polygon(
+    50% 0%,
+    65% 10%,
+    82% 8%,
+    90% 25%,
+    100% 50%,
+    90% 75%,
+    82% 92%,
+    65% 90%,
+    50% 100%,
+    35% 90%,
+    18% 92%,
+    10% 75%,
+    0% 50%,
+    10% 25%,
+    18% 8%,
+    35% 10%
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.verified-badge svg {
+  width: 13px;
+  height: 13px;
+}
+
+.username {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 28px;
+}
+
+/* ============================
+   STATS GRID (built with flexbox, not grid)
+============================ */
+.stats-grid {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-bottom: 32px;
+}
+
+.stat-card {
+  flex: 1 1 calc(50% - 7px);
+  min-width: calc(50% - 7px);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+  background-color: rgba(255, 255, 255, 0.12);
+  border-radius: 18px;
+  padding: 16px 14px;
+}
+
+.stat-icon {
+  width: 29.3px;
+  height: 34.7px;
+  flex-grow: 0;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.stat-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.stat-label {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.stat-value {
+  font-size: 19px;
+  font-weight: bold;
+  color: #ffda57;
+}
+
+/* ============================
+   BADGES
+============================ */
+.badges-title {
+  width: 100%;
+  font-size: 20px;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 18px;
+}
+
+.badges-row {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.badge {
+  flex: 1 1 0;
+  aspect-ratio: 1 / 1.05;
+  clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+}
+
+.badge-red {
+  background: linear-gradient(160deg, #e05656, #b3243f);
+}
+
+.badge-blue {
+  background: linear-gradient(160deg, #4a72d6, #2d3f9c);
+}
+
+.badge-green {
+  background: linear-gradient(160deg, #3fbf5f, #1f8f3d);
+}
+
+.badge-purple {
+  background: linear-gradient(160deg, #a15fd6, #7a2fbf);
+  opacity: 0.5;
+}
+
+/* ============================
+   BOTTOM NAV
+============================ */
+.bottom-nav {
+  position: fixed;
+  left: 50%;
+  bottom: 20px;
+  transform: translateX(-50%);
+
+  width: calc(100% - 44px);
+  max-width: 436px;
+  height: 76px;
+
+  display: flex;
+  align-items: center;
+
+  padding: 6px;
+
+  background: #ffda57;
+  border-radius: 50px;
+  box-sizing: border-box;
+}
+
+/* ===========================
+   NEW: Reset default button styles
+   Removes browser's gray button background
+=========================== */
+.play,
+.analyse,
+.profile {
+  border: none;
+  outline: none;
+  appearance: none;
+  -webkit-appearance: none;
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  font: inherit;
+}
+
+/* ---------- Play ---------- */
+
+.play {
+  flex: 1;
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 50px;
+}
+
+.controller-icon {
+  width: 31px;
+  height: 20px;
+  object-fit: contain;
+}
+
+/* ---------- Analyse ---------- */
+
+.analyse {
+  flex: 1;
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 50px;
+}
+
+.barchart-symbol {
+  width: 25px;
+  height: 19px;
+  object-fit: contain;
+}
+
+/* ---------- Profile ---------- */
+
+.profile {
+  flex: 1.25;
+
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* Override transparent button background */
+  background: #470879;
+
+  border-radius: 999px;
+
+  /* Slight offset to match Zeplin */
+  margin-right: 2px;
+}
+
+/* ---------- Avatar ---------- */
+
+.avatar {
+  width: 34px;
+  height: 34px;
+
+  border: 1px solid #fff;
+  border-radius: 10px;
+
+  overflow: hidden;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  flex-shrink: 0;
+}
+
+.avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ===========================
+   OPTIONAL
+   If some browsers still show
+   a gray button background,
+   uncomment this block.
+=========================== */
+
+/*
+button {
+  all: unset;
+  box-sizing: border-box;
+}
+*/
+/* ============================
+   SMALL SCREEN TWEAKS
+============================ */
+@media (max-width: 360px) {
+  .photo-wrap {
+    width: 170px;
+    height: 170px;
+  }
+
+  .name {
+    font-size: 24px;
+  }
+}
