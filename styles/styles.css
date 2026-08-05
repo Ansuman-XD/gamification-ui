@@ -25,7 +25,7 @@ body {
   flex-direction: column;
   align-items: center;
   background: linear-gradient(180deg, #8a2be2 0%, #470879 60%, #2e0553 100%);
-  padding: 24px 22px 100px 22px;
+padding:18px 18px 100px;
   overflow-x: hidden;
 }
 
@@ -38,7 +38,7 @@ body {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 28px;
+  margin-bottom: 18px;
 }
 
 .xp-badge {
@@ -104,12 +104,12 @@ body {
    PROFILE PHOTO
 ============================ */
 .photo-wrap {
-  width: 200px;
-  height: 200px;
+  width: 188px;
+  height: 188px;
   border-radius: 28px;
   overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.4);
-  margin-bottom: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  margin-bottom: 22px;
 }
 
 .photo {
@@ -131,8 +131,8 @@ body {
 }
 
 .name {
-  font-size: 28px;
-  font-weight: bold;
+  font-size: 30px;
+  font-weight: 700;
   color: #ffffff;
 }
 
@@ -176,7 +176,7 @@ body {
 
 .username {
   font-size: 16px;
-  color: rgba(255, 255, 255, 0.85);
+  color: rgba(255, 255, 255, 0.5);
   margin-bottom: 28px;
 }
 
@@ -200,8 +200,8 @@ body {
   align-items: center;
   gap: 12px;
   background-color: rgba(255, 255, 255, 0.12);
-  border-radius: 18px;
-  padding: 16px 14px;
+  border-radius: 16px;
+  padding: 18px 16px;
 }
 
 .stat-icon {
@@ -220,7 +220,7 @@ body {
 
 .stat-label {
   font-size: 13px;
-  color: rgba(255, 255, 255, 0.65);
+  color: rgba(255, 218, 87, 0.65);
 }
 
 .stat-value {
@@ -236,7 +236,7 @@ body {
   width: 100%;
   font-size: 20px;
   font-weight: bold;
-  color: rgba(255, 255, 255, 0.85);
+  color: rgba(255, 255, 255, 0.5);
   margin-bottom: 18px;
 }
 
@@ -246,16 +246,19 @@ body {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
   margin-bottom: 20px;
 }
 
 .badge {
-  flex: 1 1 0;
-  aspect-ratio: 1 / 1.05;
-  clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
-}
+    width: 80px;          /* Increase this value */
+  height: 92px;         /* Increase this value */
 
+  flex: none;
+
+  -webkit-mask: url("../assets/icons/hexagon-badge2.svg") center/contain no-repeat;
+  mask: url("../assets/icons/hexagon-badge2.svg") center/contain no-repeat;
+}
 .badge-red {
   background: linear-gradient(160deg, #e05656, #b3243f);
 }
@@ -284,12 +287,12 @@ body {
 
   width: calc(100% - 44px);
   max-width: 436px;
-  height: 76px;
+  height: 68px;
 
   display: flex;
   align-items: center;
 
-  padding: 6px;
+  padding: 5px;
 
   background: #ffda57;
   border-radius: 50px;
@@ -355,7 +358,7 @@ body {
 /* ---------- Profile ---------- */
 
 .profile {
-  flex: 1.25;
+  flex: 1.4;
 
   height: 100%;
 
@@ -375,8 +378,8 @@ body {
 /* ---------- Avatar ---------- */
 
 .avatar {
-  width: 34px;
-  height: 34px;
+  width: 38px;
+  height: 38px;
 
   border: 1px solid #fff;
   border-radius: 10px;
