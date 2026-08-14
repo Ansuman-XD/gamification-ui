@@ -108,8 +108,9 @@ padding:18px 18px 100px;
   height: 188px;
   border-radius: 28px;
   overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.35);
+  border: 1.5px solid rgba(125, 123, 123, 0.9);
   margin-bottom: 22px;
+  padding: 4px;
 }
 
 .photo {
@@ -117,6 +118,7 @@ padding:18px 18px 100px;
   height: 100%;
   object-fit: cover;
   display: block;
+  border-radius: 28px;
 }
 
 /* ============================
@@ -286,7 +288,7 @@ padding:18px 18px 100px;
   transform: translateX(-50%);
 
   width: calc(100% - 44px);
-  max-width: 436px;
+  max-width: 350px;
   height: 68px;
 
   display: flex;
@@ -297,6 +299,9 @@ padding:18px 18px 100px;
   background: #ffda57;
   border-radius: 50px;
   box-sizing: border-box;
+ 
+  overflow: hidden;   /* add this so the highlight stays inside the pill */
+  box-shadow: 0 8px 24px rgba(255, 218, 87, 0.4); /* soft glow under the bar */
 }
 
 /* ===========================
