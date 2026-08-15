@@ -50,19 +50,9 @@ padding:18px 18px 100px;
 
 /* Star shape (given as solid block clipped to star) */
 .Shape {
-  /* width: 18.7px;
-  height: 21px;
-  flex-grow: 0;
-  background-color: #ffda57;
-  clip-path: polygon(
-    50% 0%, 61% 35%, 98% 35%, 68% 57%,
-    79% 91%, 50% 70%, 21% 91%, 32% 57%,
-    2% 35%, 39% 35%
-  ); */
   width: 18.7px;
   height: 21px;
   flex-grow: 0;
-  /* background-color: #ffda57; */
 }
 
 .XP {
@@ -138,12 +128,7 @@ padding:18px 18px 100px;
   color: #ffffff;
 }
 
-/* .verified-badge {
-  width: 22px;
-  height: 22px;
-  object-fit: contain;
-} */
- .verified-badge {
+.verified-badge {
   width: 22.2px;
   height: 22.2px;
   flex-grow: 0;
@@ -253,13 +238,15 @@ padding:18px 18px 100px;
 }
 
 .badge {
-    width: 80px;          /* Increase this value */
-  height: 92px;         /* Increase this value */
+  width: 80px;
+  height: 92px;
 
   flex: none;
 
-  -webkit-mask: url("../assets/icons/hexagon-badge2.svg") center/contain no-repeat;
-  mask: url("../assets/icons/hexagon-badge2.svg") center/contain no-repeat;
+  /* Inlined as base64 data URI so it works even when the file is opened
+     directly via file:// (Chrome blocks external SVG mask files in that case) */
+  -webkit-mask: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjAiIGhlaWdodD0iMTM4IiB2aWV3Qm94PSIwIDAgMTIwIDEzOCI+CiAgPHBhdGggZD0iTTYwIDggICAgICAgIFE2NiA4IDcxIDEyICAgICAgICBMMTA0IDMxICAgICAgICBRMTEwIDM1IDExMCA0MiAgICAgICAgTDExMCA5NiAgICAgICAgUTExMCAxMDMgMTA0IDEwNyAgICAgICAgTDcxIDEyNiAgICAgICAgUTY2IDEzMCA2MCAxMzAgICAgICAgIFE1NCAxMzAgNDkgMTI2ICAgICAgICBMMTYgMTA3ICAgICAgICBRMTAgMTAzIDEwIDk2ICAgICAgICBMMTAgNDIgICAgICAgIFExMCAzNSAxNiAzMSAgICAgICAgTDQ5IDEyICAgICAgICBRNTQgOCA2MCA4WiIgZmlsbD0id2hpdGUiPjwvcGF0aD4KPC9zdmc+Cg==") center/contain no-repeat;
+  mask: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjAiIGhlaWdodD0iMTM4IiB2aWV3Qm94PSIwIDAgMTIwIDEzOCI+CiAgPHBhdGggZD0iTTYwIDggICAgICAgIFE2NiA4IDcxIDEyICAgICAgICBMMTA0IDMxICAgICAgICBRMTEwIDM1IDExMCA0MiAgICAgICAgTDExMCA5NiAgICAgICAgUTExMCAxMDMgMTA0IDEwNyAgICAgICAgTDcxIDEyNiAgICAgICAgUTY2IDEzMCA2MCAxMzAgICAgICAgIFE1NCAxMzAgNDkgMTI2ICAgICAgICBMMTYgMTA3ICAgICAgICBRMTAgMTAzIDEwIDk2ICAgICAgICBMMTAgNDIgICAgICAgIFExMCAzNSAxNiAzMSAgICAgICAgTDQ5IDEyICAgICAgICBRNTQgOCA2MCA4WiIgZmlsbD0id2hpdGUiPjwvcGF0aD4KPC9zdmc+Cg==") center/contain no-repeat;
 }
 .badge-red {
   background: linear-gradient(160deg, #e05656, #b3243f);
@@ -299,15 +286,11 @@ padding:18px 18px 100px;
   background: #ffda57;
   border-radius: 50px;
   box-sizing: border-box;
- 
-  overflow: hidden;   /* add this so the highlight stays inside the pill */
-  box-shadow: 0 8px 24px rgba(255, 218, 87, 0.4); /* soft glow under the bar */
+
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(255, 218, 87, 0.4);
 }
 
-/* ===========================
-   NEW: Reset default button styles
-   Removes browser's gray button background
-=========================== */
 .play,
 .analyse,
 .profile {
@@ -321,8 +304,6 @@ padding:18px 18px 100px;
   cursor: pointer;
   font: inherit;
 }
-
-/* ---------- Play ---------- */
 
 .play {
   flex: 1;
@@ -341,8 +322,6 @@ padding:18px 18px 100px;
   object-fit: contain;
 }
 
-/* ---------- Analyse ---------- */
-
 .analyse {
   flex: 1;
   height: 100%;
@@ -360,8 +339,6 @@ padding:18px 18px 100px;
   object-fit: contain;
 }
 
-/* ---------- Profile ---------- */
-
 .profile {
   flex: 1.4;
 
@@ -371,16 +348,12 @@ padding:18px 18px 100px;
   justify-content: center;
   align-items: center;
 
-  /* Override transparent button background */
   background: #470879;
 
   border-radius: 999px;
 
-  /* Slight offset to match Zeplin */
   margin-right: 2px;
 }
-
-/* ---------- Avatar ---------- */
 
 .avatar {
   width: 38px;
@@ -405,19 +378,6 @@ padding:18px 18px 100px;
   display: block;
 }
 
-/* ===========================
-   OPTIONAL
-   If some browsers still show
-   a gray button background,
-   uncomment this block.
-=========================== */
-
-/*
-button {
-  all: unset;
-  box-sizing: border-box;
-}
-*/
 /* ============================
    SMALL SCREEN TWEAKS
 ============================ */
