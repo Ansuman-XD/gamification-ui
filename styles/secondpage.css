@@ -32,7 +32,7 @@ body {
    The actual quiz remains a 360px mobile screen.
 ===================================================== */
 
-.mobile-preview {
+/* .mobile-preview {
     width: 100%;
     height: 100dvh;
 
@@ -41,7 +41,7 @@ body {
     justify-content: center;
 
     overflow: hidden;
-}
+} */
 
 
 /* =====================================================
@@ -51,8 +51,8 @@ body {
 .quiz-screen {
     position: relative;
 
-    width: 360px;
-    height: 700px;
+    width: 100%;
+    height: 100dvh;
 
     flex: 0 0 360px;
 
@@ -69,8 +69,11 @@ body {
         );
 
     color: #ffffff;
-
+display: flex;
+    align-items: center;
+    justify-content: center;
     isolation: isolate;
+    overflow: hidden;
 }
 
 
